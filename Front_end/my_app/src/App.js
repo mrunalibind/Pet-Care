@@ -6,6 +6,7 @@ import Navigation from './Components/Navigation';
 import Home from './Components/Home';
 import Register from './Components/Register';
 import Login from './Components/Login';
+import Footer from './Components/Footer';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path='/register' element={<Register/>}/>
         <Route path='/login' element={<Login/>}/>
       </Routes>
+      <Footer/>
       </BrowserRouter>
       
     </div>

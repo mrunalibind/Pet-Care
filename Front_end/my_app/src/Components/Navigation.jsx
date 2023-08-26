@@ -1,21 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import favIcon from "../Images/Pet_Care.png"
 import style from "./Home.module.css"
-import { Link, useSearchParams } from 'react-router-dom'
-import Register from './Register'
+import { Link } from 'react-router-dom'
 import {IoLocationSharp} from "react-icons/io5"
 import {BiSolidUser} from "react-icons/bi"
 import {GiHamburgerMenu} from "react-icons/gi"
 
+
 function Navigation() {
  const [show,setShow]=useState(false)
-    
-    
- 
+  
   return (
     <div>
         <nav>
-            <div id={style.imgDiv}><img id={style.logo} src={favIcon} alt="PetImage" /></div>
+            <div id={style.imgDiv}><Link to="/"><img id={style.logo} src={favIcon} alt="PetImage" /></Link></div>
             <div className={style.disp}>
               <div style={{display:"flex",width:"130px",justifyContent:"space-between"}}><IoLocationSharp style={{marginTop:"3px"}}/><h4 style={{marginRight:"5px"}}>Find Practice</h4></div>
               <div>
@@ -34,8 +32,8 @@ function Navigation() {
                 
                 {
                   show?<div className={style.hambur}>
+                  <p><Link style={{color:"black",textDecoration:"none"}} to="/companionCare">Companion Care</Link></p>
                   
-                  <p>Companion Care</p>
                   <p>Enquiries and Appointments</p>
                   <p>Pet Health Plans</p>
                   <p>Pet Advice</p>

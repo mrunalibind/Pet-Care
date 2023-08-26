@@ -160,3 +160,19 @@ nav{
     /* border-radius: 20px; */
     background-color: grey;
 }
+
+.com{
+    background-color: rgb(245, 244, 242);
+    font-size: 10px;
+    text-align: left;
+    padding: 10px 40px;
+}
+.com>span{
+    font-weight: 700;
+}
+.pagi{
+    display:flex;
+    width:150px;
+    justify-content:space-between;
+    margin:auto
+}

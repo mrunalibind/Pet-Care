@@ -8,6 +8,7 @@ import Register from './Components/Register';
 import Login from './Components/Login';
 import Footer from './Components/Footer';
 import Companion from './Components/Companion';
+import Enqu_Appoin from './Components/Enqu_Appoin';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/register' element={<Register/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/companionCare' element={<Companion/>}/>
+        <Route path='/enquiries-and-appointment' element={<Enqu_Appoin/>}/>
       </Routes>
       <Footer/>
       </BrowserRouter>

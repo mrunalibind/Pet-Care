@@ -32,9 +32,9 @@ function Navigation() {
                 
                 {
                   show?<div className={style.hambur}>
-                  <p><Link style={{color:"black",textDecoration:"none"}} to="/companionCare">Companion Care</Link></p>
+                  <p><Link className={style.menuLink} to="/companionCare">Companion Care</Link></p>
                   
-                  <p>Enquiries and Appointments</p>
+                  <p><Link className={style.menuLink} to="/enquiries-and-appointment">Enquiries and Appointments</Link></p>
                   <p>Pet Health Plans</p>
                   <p>Pet Advice</p>
                   <p>Services</p>

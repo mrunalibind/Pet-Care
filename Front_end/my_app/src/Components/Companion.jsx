@@ -53,19 +53,19 @@ function Companion() {
             </div>
             <br />
             <div style={{ display: "flex", backgroundColor: "rgb(245, 244, 242)" }}>
-                <div className={style.check} style={{ width: "30%", textAlign: "start", padding: "40px" }}>
+                <div className={style.check} style={{ width: "20%", textAlign: "start", padding: "40px" }}>
                     <h3>Refine by</h3>
                     <br />
                     <hr />
                     <br />
                     <p>Species</p>
 
-                    <div><input type="checkbox" name="" id="" value="Cat" onChange={handleCheckboxChange}/><span>Cat</span></div>
-                    <div><input type="checkbox" name="" id="" value="Dog" onChange={handleCheckboxChange} /><span>Dog</span></div>
-                    <div><input type="checkbox" name="" id="" value="Rabbit" onChange={handleCheckboxChange} /><span>Rabbit</span></div>
-                    <div><input type="checkbox" name="" id="" value="Bird" onChange={handleCheckboxChange} /><span>Bird</span></div>
-                    <div><input type="checkbox" name="" id="" value="Hamster" onChange={handleCheckboxChange} /><span>Hamster</span></div>
-                    <div><input type="checkbox" name="" id="" value="Fish" onChange={handleCheckboxChange} /><span>Fish</span></div>
+                    <div><input type="checkbox" value="Cat" onChange={handleCheckboxChange}/><span>Cat</span></div>
+                    <div><input type="checkbox" value="Dog" onChange={handleCheckboxChange} /><span>Dog</span></div>
+                    <div><input type="checkbox" value="Rabbit" onChange={handleCheckboxChange} /><span>Rabbit</span></div>
+                    <div><input type="checkbox" value="Bird" onChange={handleCheckboxChange} /><span>Bird</span></div>
+                    <div><input type="checkbox" value="Hamster" onChange={handleCheckboxChange} /><span>Hamster</span></div>
+                    <div><input type="checkbox" value="Fish" onChange={handleCheckboxChange} /><span>Fish</span></div>
 
                 </div>
                 <div>{

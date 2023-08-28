@@ -25,7 +25,7 @@ app.post("/send-email", async (req, res) => {
         port: 587,
         auth: {
             user: "petcare893@gmail.com",
-            pass: "yhlriplxvjeklfin"
+            pass: process.env.mailPass
         }
     })
     const mailOptions = {

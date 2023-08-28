@@ -68,7 +68,7 @@ function Enqu_Appoin() {
         <input className={style.inputTags} type="text" name="" id="" required/>
         
         <h5>Email *</h5>
-        <input value={formData.email} onChange={(e)=>changeHandler("email",e.target.value)} className={style.inputTags} type="text" name="" id="" required/>
+        <input value={formData.email} onChange={(e)=>changeHandler("email",e.target.value)} className={style.inputTags} type="email" name="" id="" required/>
         
         <h5>Mobile number *</h5>
         <input className={style.inputTags} type="text" name="" id="" required/>

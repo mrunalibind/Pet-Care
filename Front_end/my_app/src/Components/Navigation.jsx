@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import favIcon from "../Images/Pet_Care.png"
 import style from "./Home.module.css"
 // import HealthPlan from './HealthPlan'
@@ -23,7 +23,7 @@ function Navigation() {
               <div className={style.regis}>
                 <div><Link to="/register">
                   
-                  <BiSolidUser style={{color:"black",marginTop:"16px"}}/>
+                  <BiSolidUser className={style.user}/>
                   </Link></div>
                   
                 <div onClick={()=>setShow(!show)} style={{display:"flex",flexDirection:"column"}}>
@@ -33,10 +33,12 @@ function Navigation() {
                 
                 {
                   show?<div className={style.hambur}>
-                  <p><Link style={{color:"black",textDecoration:"none"}} to="/companionCare">Companion Care</Link></p>
+                  <p><Link className={style.menuLink} to="/companionCare">Companion Care</Link></p>
                   
-                  <p>Enquiries and Appointments</p>
-                  <Link to = '/HealthPlan'><p>Pet Health Plans</p></Link>
+
+                  <p><Link className={style.menuLink} to="/enquiries-and-appointment">Enquiries and Appointments</Link></p>
+                  <p>Pet Health Plans</p>
+
                   <p>Pet Advice</p>
                   <p>Services</p>
                   <p>Pet Symptom Checker</p>

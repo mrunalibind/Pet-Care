@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import favIcon from "../Images/Pet_Care.png"
 import style from "./Home.module.css"
+// import HealthPlan from './HealthPlan'
 import { Link } from 'react-router-dom'
 import {IoLocationSharp} from "react-icons/io5"
 import {BiSolidUser} from "react-icons/bi"
@@ -34,8 +35,10 @@ function Navigation() {
                   show?<div className={style.hambur}>
                   <p><Link className={style.menuLink} to="/companionCare">Companion Care</Link></p>
                   
+
                   <p><Link className={style.menuLink} to="/enquiries-and-appointment">Enquiries and Appointments</Link></p>
                   <p>Pet Health Plans</p>
+
                   <p>Pet Advice</p>
                   <p>Services</p>
                   <p>Pet Symptom Checker</p>

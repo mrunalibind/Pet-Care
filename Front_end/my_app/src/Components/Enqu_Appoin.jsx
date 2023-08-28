@@ -1,7 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from "./Home.module.css"
 
 function Enqu_Appoin() {
+
+  const [formData, setFormData] = useState({
+    name:"",
+    surname:"",
+    email:"",
+    date:"",
+    time:""
+  });
+  const changeHandler=(key,value)=>{
+    setFormData({...formData,[key]:value})
+  }
+
+  
+
   return (
     <div className={style.EnquiDiv} >
       <p className={style.com}>Companion Care &gt; <span>Enquiries and Appointments</span></p>
@@ -11,17 +25,38 @@ function Enqu_Appoin() {
       
       <p className={style.EnquApppara}>For appointments within the next 24 hours, we ask that you call the practice during opening hours. In case of emergencies please telephone the practice immediately where you will be able to obtain appropriate advice.</p>
      <br />
-      <form>
+      <form onSubmit={async(e)=>{
+        e.preventDefault();
+        console.log(formData)
+        try {
+          const response = await fetch('http://localhost:8080/send-email', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+          });
+          console.log(response)
+          if (response.ok) {
+            // Redirect to the specified URL
+            window.location.href = "/request-Appointment";
+          } else {
+            console.error('Failed to send email');
+          }
+        } catch (error) {
+          console.error('Error sending email:', error);
+        }
+      }}>
         
         <h5>Are you an existing or new customer ?</h5>
         <span><input type="radio" name="" id="" value="New" />New</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <span><input type="radio" name="" id="" value="New" />Existing</span>
         
         <h5>First Name *</h5>
-        <input className={style.inputTags} type="text" name="" id="" required/>
+        <input value={formData.name} onChange={(e)=>changeHandler("name",e.target.value)} className={style.inputTags} type="text" name="" id="" required/>
        
         <h5>Surname *</h5>
-        <input className={style.inputTags} type="text" name="" id="" required/>
+        <input value={formData.surname} onChange={(e)=>changeHandler("surname",e.target.value)} className={style.inputTags} type="text" name="" id="" required/>
         
         <h5>Postcode *</h5>
         <input className={style.inputTags} type="text" name="" id="" required/>
@@ -33,7 +68,7 @@ function Enqu_Appoin() {
         <input className={style.inputTags} type="text" name="" id="" required/>
         
         <h5>Email *</h5>
-        <input className={style.inputTags} type="text" name="" id="" required/>
+        <input value={formData.email} onChange={(e)=>changeHandler("email",e.target.value)} className={style.inputTags} type="text" name="" id="" required/>
         
         <h5>Mobile number *</h5>
         <input className={style.inputTags} type="text" name="" id="" required/>
@@ -45,9 +80,9 @@ function Enqu_Appoin() {
         <span>General Enquiry</span>
         
         <h5>Select a preffered date *</h5>
-        <input className={style.inputTags} type="date" name="" id="" required/>
+        <input value={formData.date} onChange={(e)=>changeHandler("date",e.target.value)} className={style.inputTags} type="date" name="" id="" required/>
         <h5>Preffered Time *</h5>
-        <input className={style.inputTags} type="time" name="" id="" required/>
+        <input value={formData.time} onChange={(e)=>changeHandler("time",e.target.value)} className={style.inputTags} type="time" name="" id="" required/>
         <br />
       {/* Take PetSpecies from the url param */}
         <h5>Pet Age *</h5>

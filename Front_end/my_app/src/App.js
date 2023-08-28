@@ -8,6 +8,8 @@ import Register from './Components/Register';
 import Login from './Components/Login';
 import Footer from './Components/Footer';
 import Companion from './Components/Companion';
+import HealthPlan from './Components/HealthPlan'
+
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path='/register' element={<Register/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/companionCare' element={<Companion/>}/>
+        <Route path='/HealthPlan' element={<HealthPlan/>}/>
+
       </Routes>
       <Footer/>
       </BrowserRouter>

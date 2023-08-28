@@ -190,3 +190,131 @@
 #loginBtn{
   margin-top: 5px;
 }
+
+
+/* Health Plan */
+
+
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  background-color: rgb(7, 7, 141);
+
+}
+
+.main-cont {
+  flex: 1;
+  padding-right: 20px;
+}
+
+#rigth-cont {
+  flex: 1;
+  padding-left: 20px;
+  color: white;
+}
+
+.text-container {
+  padding: 20px;
+  margin: 20px;
+  text-align: justify;
+  width: 60%;
+  margin: auto;
+}
+.text-container p{
+ font-size: 22px;
+ margin: 20px;
+}
+.text-container h1{
+  font-size: 30px;
+  margin: 10px;
+ }
+
+#heading-1 {
+  background-color: rgb(7, 7, 141);
+  padding: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .cont {
+    flex-direction: column;
+  }
+
+  .main-cont,
+  #rigth-cont {
+    padding: 20px;
+  }
+}
+
+/* App.css */
+
+/* ... (your previous styles) ... */
+
+#palans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  flex: 1;
+  display: flex;
+text-align: justify;
+  transition: transform 0.2s ease-in-out;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+}
+
+.box img {
+  max-width: 150px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.box div:nth-child(2) {
+  flex: 1;
+}
+
+.box h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.box h3 {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #666;
+}
+
+.box p {
+  font-size: 14px;
+  color: #444;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .box {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .box img {
+    margin: 0 auto 10px;
+  }
+}

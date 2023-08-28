@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import favIcon from "../Images/Pet_Care.png"
 import style from "./Home.module.css"
+// import HealthPlan from './HealthPlan'
 import { Link } from 'react-router-dom'
 import {IoLocationSharp} from "react-icons/io5"
 import {BiSolidUser} from "react-icons/bi"
@@ -35,7 +36,7 @@ function Navigation() {
                   <p><Link style={{color:"black",textDecoration:"none"}} to="/companionCare">Companion Care</Link></p>
                   
                   <p>Enquiries and Appointments</p>
-                  <p>Pet Health Plans</p>
+                  <Link to = '/HealthPlan'><p>Pet Health Plans</p></Link>
                   <p>Pet Advice</p>
                   <p>Services</p>
                   <p>Pet Symptom Checker</p>

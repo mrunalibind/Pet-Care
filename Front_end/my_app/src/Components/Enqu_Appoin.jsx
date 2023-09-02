@@ -39,7 +39,14 @@ function Enqu_Appoin() {
           console.log(response)
           if (response.ok) {
             // Redirect to the specified URL
-            window.location.href = "/request-Appointment";
+            // const newPath = "";
+            // const newURL = window.location.origin + newPath;
+            let container=document.getElementById("container")
+            let h1=document.createElement("h3")
+            h1.innerText="Thank you for your contact request at your local Companion Care practice."
+            container.append(h1)
+            // <h1>Thank you for your contact request at your local Companion Care practice.  A member of our team will contact you shortly.</h1>
+            // window.location.href = "/request-Appointment";
           } else {
             console.error('Failed to send email');
           }
@@ -106,6 +113,8 @@ function Enqu_Appoin() {
         <input className={style.submitBtn} type="submit" value="Submit" />
         
       </form>
+
+      <div id='container'></div>
     </div>
   )
 }

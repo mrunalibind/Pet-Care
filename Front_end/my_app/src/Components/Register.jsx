@@ -49,7 +49,7 @@ function Register() {
     };
 
     try {
-      const response = await fetch('YOUR_API_ENDPOINT', {
+      const response = await fetch('https://petcarebackend-production.up.railway.app/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

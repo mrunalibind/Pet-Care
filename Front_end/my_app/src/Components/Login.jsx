@@ -49,6 +49,7 @@ function Login() {
       setPassword('');
 
       setMessage('Login Successful');
+      window.location.href = '/'
 
     } catch (error) {
       console.error('Error during login:', error);

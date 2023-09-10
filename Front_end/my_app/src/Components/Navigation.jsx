@@ -1,57 +1,65 @@
-import React, { useState } from 'react'
-import favIcon from "../Images/Pet_Care.png"
-import style from "./Home.module.css"
-// import HealthPlan from './HealthPlan'
-import { Link } from 'react-router-dom'
-import {IoLocationSharp} from "react-icons/io5"
-import {BiSolidUser} from "react-icons/bi"
-import {GiHamburgerMenu} from "react-icons/gi"
-
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { IoLocationSharp } from 'react-icons/io5';
+import { BiSolidUser } from 'react-icons/bi';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import './Navbar.css'; // Import your CSS file for styling
+import favIcon from '../Images/Pet_Care.png';
 
 function Navigation() {
- const [show,setShow]=useState(false)
-  
+  const [show, setShow] = useState(false);
+
   return (
     <div>
-        <nav>
-            <div id={style.imgDiv}><Link to="/"><img id={style.logo} src={favIcon} alt="PetImage" /></Link></div>
-            <div className={style.disp}>
-              <div style={{display:"flex",width:"130px",justifyContent:"space-between"}}><IoLocationSharp style={{marginTop:"3px"}}/><h4 style={{marginRight:"5px"}}>Find Practice</h4></div>
-              <div>
-
-              </div>
-              <div className={style.regis}>
-                <div><Link to="/register">
-                  
-                  <BiSolidUser className={style.user}/>
-                  </Link></div>
-                  
-                <div onClick={()=>setShow(!show)} style={{display:"flex",flexDirection:"column"}}>
-                  <div id='ham' className={style.ham} style={{display:"flex",marginLeft:"10px",border:"1px solid grey",borderRadius:"10px",padding:"8px"}}><h3>MENU</h3><GiHamburgerMenu style={{marginTop:"5px",marginLeft:"6px"}}/></div>
-                  
-                </div>
-                
-                {
-                  show?<div className={style.hambur}>
-                  <p><Link className={style.menuLink} to="/companionCare">Companion Care</Link></p>
-                  
-
-                  <p><Link className={style.menuLink} to="/enquiries-and-appointment">Enquiries and Appointments</Link></p>
-                  <p>Pet Health Plans</p>
-
-                  <p>Pet Advice</p>
-                  <p>Services</p>
-                  <p>Pet Symptom Checker</p>
-                  
-              </div>:null
-                }
-                
-                
-              </div>
+      <nav className="navbar">
+        <div className="logo-container">
+          <Link to="/">
+            <img src={favIcon} alt="PetImage" className="logo" />
+          </Link>
+        </div>
+        <div className="menu-container">
+          <div className="menu-item">
+            <IoLocationSharp className="icon" />
+            <h4 className="menu-text">Contact</h4>
+          </div>
+          <div className="menu-item">
+            <Link to="/register" className="menu-link">
+              {/* <BiSolidUser className="icon" /> */}
+              Sign Up
+            </Link>
+          </div>
+          <div className="menu-item" onClick={() => { console.log('Clicked'); setShow(!show); }}>
+            <div className="hamburger">
+              <h3>MENU</h3>
+              <GiHamburgerMenu className="hamburger-icon" />
             </div>
-        </nav>
+          </div>
+        </div>
+      </nav>
+      {show && (
+        <div className="mobile-menu">
+          <Link to="/companionCare" className="menu-link">
+            Companion Care
+          </Link>
+          <Link to="enquiries-and-appointment/:petID" className="menu-link">
+            Enquiries and Appointments
+          </Link>
+          <Link to="" className="menu-link">
+          Pet Health Plans
+          </Link>
+          <Link to="" className="menu-link">
+          Pet Advice
+          </Link>
+          <Link to="" className="menu-link">
+          Services
+          </Link>
+          <Link to="" className="menu-link">
+          Pet Symptom Checker
+          </Link>
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
-export default Navigation
+export default Navigation;

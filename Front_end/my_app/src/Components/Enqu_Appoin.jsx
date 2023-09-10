@@ -46,7 +46,7 @@ function Enqu_Appoin() {
             h1.innerText="Thank you for your contact request at your local Companion Care practice."
             container.append(h1)
             // <h1>Thank you for your contact request at your local Companion Care practice.  A member of our team will contact you shortly.</h1>
-            // window.location.href = "/request-Appointment";
+            window.location.href = "/";
           } else {
             console.error('Failed to send email');
           }

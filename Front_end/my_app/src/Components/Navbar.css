@@ -1,0 +1,105 @@
+/* Navigation.css */
+
+/* Navbar styles */
+.navbar {
+  background-color: #fff; /* Dark background color */
+  color: red; /* Text color */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  position: relative;
+}
+
+.menu-item:last-child {
+  margin-right: 0; /* Remove margin from the last menu item */
+}
+
+.icon {
+  font-size: 24px;
+  margin-right: 8px; /* Add slight spacing between icon and text */
+}
+
+.menu-text {
+  margin: 0;
+  font-size: 16px; /* Adjust font size */
+  font-weight: bold;
+  transition: color 0.3s; /* Add a smooth color transition on hover */
+}
+
+.menu-link {
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
+}
+
+.menu-item:hover .menu-text {
+    text-decoration: underline;
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #040302;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 10px;
+  text-align: left;
+   /* Hide by default */
+}
+
+.menu-item:hover .mobile-menu {
+  display: block; /* Show mobile menu on hover */
+}
+
+.menu-link:hover {
+  color: red; /* Change text color on hover */
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  font-size: 24px;
+  margin-left: 6px;
+}
+.menu-item:hover .mobile-menu {
+  display: block;
+  text-decoration: underline; 
+
+}
+
+

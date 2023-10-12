@@ -1,6 +1,9 @@
-import React ,{useState}from 'react'
+import React, { useState } from 'react';
 import '../App.css';
-import { Link } from 'react-router-dom'
+import { Link }  from 'react-router-dom';
+import './Register.css';
+
+
 
 function Register() {
   const [name, setName] = useState('');
@@ -8,7 +11,11 @@ function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [city, setCity] = useState('');
-  const [message, setMessage] = useState(''); 
+  const [message, setMessage] = useState('');
+  const [errors, setErrors] = useState({});
+
+  
+
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -30,16 +37,45 @@ function Register() {
     setCity(event.target.value);
   };
 
+  const validateEmail = (email) => {
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailPattern.test(email);
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (!name || !age || !email || !password || !city) {
-      setMessage('All Fields Are Required');
+    const validationErrors = {};
+
+    if (!name) {
+      validationErrors.name = 'Name is required';
+    }
+
+    if (!age) {
+      validationErrors.age = 'Age is required';
+    }
+
+    if (!email || !validateEmail(email)) {
+      validationErrors.email = 'Please enter a valid email address';
+    }
+
+    if (!password) {
+      validationErrors.password = 'Password is required';
+    }
+
+    if (!city) {
+      validationErrors.city = 'City is required';
+    }
+
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      setMessage('');
       return;
     }
 
-    setMessage('');
+    setErrors({});
 
+    
     const userData = {
       name,
       age,
@@ -63,23 +99,27 @@ function Register() {
 
       console.log('Data sent successfully:', userData);
 
-      setName('');
-      setAge('');
-      setEmail('');
-      setPassword('');
-      setCity('');
+    
+    setName('');
+    setAge('');
+    setEmail('');
+    setPassword('');
+    setCity('');
 
-      setMessage('Signup Successful');
+   
+    setMessage('Signup Successful');
 
-    } catch (error) {
-      console.error('Error sending data:', error);
-      setMessage('Signup Failed');
-    }
+    window.location.href = './login';
+  } catch (error) {
+    console.error('Error sending data:', error);
+    setMessage('Signup Failed');
+  }
+    
   };
 
   return (
     <div className="signup-container">
-      <h2>Creat a Account</h2>
+      <h2>Create an Account</h2>
       {message && <h4 className={`message ${message.includes('Success') ? 'success' : 'error'}`}>{message}</h4>}
       <form className="signup-form">
         <input
@@ -88,39 +128,52 @@ function Register() {
           onChange={handleNameChange}
           placeholder="Name"
         />
+        {errors.name && <div className="error">{errors.name}</div>}
+
         <input
           type="number"
           value={age}
           onChange={handleAgeChange}
           placeholder="Age"
         />
+        {errors.age && <div className="error">{errors.age}</div>}
+
         <input
           type="email"
           value={email}
           onChange={handleEmailChange}
           placeholder="Email"
         />
+        {errors.email && <div className="error">{errors.email}</div>}
+
         <input
           type="password"
           value={password}
           onChange={handlePasswordChange}
           placeholder="Password"
         />
+        {errors.password && <div className="error">{errors.password}</div>}
+
         <input
           type="text"
           value={city}
           onChange={handleCityChange}
           placeholder="City"
         />
+        {errors.city && <div className="error">{errors.city}</div>}
+
         <button type="submit" onClick={handleSubmit}>
           Sign Up
         </button>
-    
-        <Link to = '/login'>
-          <button id = 'loginBtn'>Login</button>
+        <br />
+<p>Already have an account?</p>
+<br />
+        <Link to="/login">
+          <button id="loginBtn">Login</button>
         </Link>
       </form>
     </div>
   );
 }
-export default Register
+
+export default Register;

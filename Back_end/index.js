@@ -20,6 +20,12 @@ const nodemailer = require("nodemailer");
 app.post("/send-email", async (req, res) => {
     const { name,surname,email, date, time } = req.body;
 
+   
+    
+
+    const adddata = new User_appointmentModel({ name, email, mobile, city, petname, date, time, urgency_level, note, doctor_id, user_id: _id })
+    await adddata.save();
+
     let transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
         port: 587,

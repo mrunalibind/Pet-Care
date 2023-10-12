@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { IoLocationSharp } from 'react-icons/io5';
-import { BiSolidUser } from 'react-icons/bi';
+// import { BiSolidUser } from 'react-icons/bi';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import './Navbar.css'; // Import your CSS file for styling
 import favIcon from '../Images/Pet_Care.png';

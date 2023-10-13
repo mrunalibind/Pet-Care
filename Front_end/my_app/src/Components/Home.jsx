@@ -16,7 +16,7 @@ function Home() {
           <button>Choose Your health plan</button>
         </div>
       </div>
-      <h1 style={{ backgroundColor: "rgb(11, 79, 197)", fontSize: "30px", fontWeight: "500", padding: "15px", color: "white", marginTop: "1px" }}>Find Out more about Companion care</h1>
+      <h1 className={style.headBan} style={{ backgroundColor: "rgb(11, 79, 197)", fontSize: "30px", fontWeight: "500", padding: "15px", color: "white"}}>Find Out more about Companion care</h1>
       <div className={style.animals}>
         <div>
           <div className={style.head}><h2>Protecting your rabbit from flystrike</h2>

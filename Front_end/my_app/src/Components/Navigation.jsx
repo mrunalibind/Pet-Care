@@ -16,15 +16,14 @@ function Navigation() {
         <nav>
             <div id={style.imgDiv}><Link to="/"><img id={style.logo} src={favIcon} alt="PetImage" /></Link></div>
             <div className={style.disp}>
-              <div style={{display:"flex",width:"130px",justifyContent:"space-between"}}><IoLocationSharp style={{marginTop:"3px"}}/><h4 style={{marginRight:"5px"}}>Find Practice</h4></div>
-              <div>
-
-              </div>
+              <div className={style.navFlex}><IoLocationSharp style={{marginTop:"3px"}}/><h4 style={{marginRight:"5px"}}>Find Practice</h4></div>
+              
               <div className={style.regis}>
-                <div><Link to="/register">
-                  
-                  <BiSolidUser className={style.user}/>
-                  </Link></div>
+                <div> 
+                  <Link to="/register">
+                    <BiSolidUser className={style.user}/>
+                  </Link>
+                </div>
                   
                 <div onClick={()=>setShow(!show)} style={{display:"flex",flexDirection:"column"}}>
                   <div id='ham' className={style.ham} style={{display:"flex",marginLeft:"10px",border:"1px solid grey",borderRadius:"10px",padding:"8px"}}><h3>MENU</h3><GiHamburgerMenu style={{marginTop:"5px",marginLeft:"6px"}}/></div>

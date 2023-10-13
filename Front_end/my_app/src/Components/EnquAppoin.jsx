@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import style from "./Home.module.css"
 
-function Enqu_Appoin() {
+function EnquAppoin() {
 
   const [formData, setFormData] = useState({
     name:"",
@@ -46,7 +46,7 @@ function Enqu_Appoin() {
             h1.innerText="Thank you for your contact request at your local Companion Care practice."
             container.append(h1)
             // <h1>Thank you for your contact request at your local Companion Care practice.  A member of our team will contact you shortly.</h1>
-            // window.location.href = "/request-Appointment";
+            window.location.href = "/";
           } else {
             console.error('Failed to send email');
           }
@@ -54,10 +54,16 @@ function Enqu_Appoin() {
           console.error('Error sending email:', error);
         }
       }}>
-        
-        <h5>Are you an existing or new customer ?</h5>
-        <span><input type="radio" name="" id="" value="New" />New</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <span><input type="radio" name="" id="" value="New" />Existing</span>
+       <h5>Are you an existing or new customer ?</h5>
+<span>
+  <input type="radio" name="customerType" id="newCustomer" value="New" />
+  New
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span>
+  <input type="radio" name="customerType" id="existingCustomer" value="Existing" />
+  Existing
+</span>
         
         <h5>First Name *</h5>
         <input value={formData.name} onChange={(e)=>changeHandler("name",e.target.value)} className={style.inputTags} type="text" name="" id="" required/>
@@ -119,4 +125,4 @@ function Enqu_Appoin() {
   )
 }
 
-export default Enqu_Appoin
+export default EnquAppoin

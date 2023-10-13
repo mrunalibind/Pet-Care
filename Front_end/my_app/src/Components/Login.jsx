@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
+import './Login.css';
 import '../App.css';
-
-
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+  const [errors, setErrors] = useState({});
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -15,15 +15,31 @@ function Login() {
     setPassword(event.target.value);
   };
 
+  const validateEmail = (email) => {
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailPattern.test(email);
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (!email || !password) {
-      setMessage('All Fields Are Required');
+    const validationErrors = {};
+
+    if (!email || !validateEmail(email)) {
+      validationErrors.email = 'Please enter a valid email address';
+    }
+
+    if (!password) {
+      validationErrors.password = 'Password is required';
+    }
+
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      setMessage('');
       return;
     }
 
-    setMessage('');
+    setErrors({});
 
     const userData = {
       email,
@@ -49,6 +65,8 @@ function Login() {
       setPassword('');
 
       setMessage('Login Successful');
+      // Redirect to another page, e.g., the dashboard
+      window.location.href = './';
 
     } catch (error) {
       console.error('Error during login:', error);
@@ -67,12 +85,16 @@ function Login() {
           onChange={handleEmailChange}
           placeholder="Email"
         />
+        {errors.email && <p className="error">{errors.email}</p>}
+
         <input
           type="password"
           value={password}
           onChange={handlePasswordChange}
           placeholder="Password"
         />
+        {errors.password && <p className="error">{errors.password}</p>}
+
         <button type="submit" onClick={handleSubmit}>
           Log In
         </button>
@@ -81,5 +103,4 @@ function Login() {
   );
 }
 
-
-export default Login
+export default Login;

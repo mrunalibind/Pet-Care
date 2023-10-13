@@ -1,90 +1,100 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.navFlex{
-    display:flex;
-    width:130px;
-    justify-content:space-between
-}
-#imgDiv {
-    width:10%;
-    margin-left: 50px;
-    height:75px;
-}
-.menuLink{
-    color:black;
-    text-decoration:none;
-}
-.menuLink:hover{
-    color: rgb(70, 134, 11);
-}
-.user{
-    color:black;
-    margin-top:16px;
-}
-.user:hover{
-    color: rgb(70, 134, 11);
 
+#imgDiv {
+    width: 10%;
+    margin-left: 5%; /* Instead of fixed 50px margin */
+    height: 75px;
 }
+
+.menuLink {
+    color: black;
+    text-decoration: none;
+}
+
+.menuLink:hover {
+    color: rgb(70, 134, 11);
+}
+
+.user {
+    color: black;
+    margin-top: 16px;
+}
+
+.user:hover {
+    color: rgb(70, 134, 11);
+}
+
 #logo {
-    width:100%;
-    height:100%;
-    object-fit:cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-nav{
+
+nav {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     height: 75px;
     display: flex;
     justify-content: space-between;
-    
+    flex-wrap: wrap; /* Allow content to wrap to the next line on small screens */
 }
-.disp{
+
+.disp {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 300px;
+    width: 100%; /* Full width on smaller screens */
+    margin: 5px; /* Add some spacing */
 }
+
 .ban {
-    width:100%;
+    width: 100%;
     display: flex;
-    height:500px;
+    flex-direction: column; /* Stack items vertically on small screens */
 }
-.bluBann{
+
+.bluBann {
     background-color: rgb(11, 79, 197);
     color: white;
-    padding-top: 50px;
-    width: 30%;
+    padding: 20px;
+    width: 100%; /* Full width on smaller screens */
 }
-.ham:hover{
+
+.ham:hover {
     background-color: rgb(103, 152, 4);
     cursor: pointer;
     color: white;
+}
 
+.hambur {
+    position: absolute;
+    font-size: 12px;
+    padding: 2px;
+    margin-top: 50px;
+    background-color: white;
 }
-.hambur{
-    position:absolute;
-    font-size:12px;
-    padding:2px;
-    margin-top:50px;
-    background-color:white
-}
-.hambur p{
+
+.hambur p {
     padding: 3px;
     border: 1px solid grey;
 }
-.hambur p:hover{
+
+.hambur p:hover {
     color: rgb(80, 114, 12);
     cursor: pointer;
 }
-.bluBann h2{
+
+.bluBann h2 {
     font-size: 28px;
     font-family: 'Times New Roman', Times, serif;
     margin: 4px;
 }
-.bluBann button{
+
+.bluBann button {
     cursor: pointer;
-    margin-top: 40px;
+    margin-top: 20px;
     background-color: rgb(103, 152, 4);
     padding: 10px;
     color: white;
@@ -92,112 +102,105 @@ nav{
     border-radius: 4px;
     font-size: 15px;
 }
-.bluBann h4{
+
+.bluBann h4 {
     font-size: 12px;
 }
-.banner {
-    width:70%;
-    height:100%;
-    object-fit:cover;
-}
-.regis{
-    
-    display: flex;
-    width: 200px;
-    justify-content: space-around;
-}
-.animals{
-    margin-top: 1px;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 1px;
-}
-.animals >div:nth-child(even){
-    background-color: rgb(11, 79, 197);
 
+.banner {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
 }
-.head{
-    height: 160px;
+
+.regis {
+    display: flex;
+    width: 100%; /* Full width on smaller screens */
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow content to wrap to the next line on small screens */
 }
-.animals button{
+
+.animals {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible columns */
+    gap: 10px;
+    justify-content: center;
+}
+
+.animals button {
     cursor: pointer;
     padding: 8px 5px;
     border-radius: 5px;
     border: none;
     font-weight: 500;
-    margin: 20px;
+    margin: 10px;
 }
-.animals h2{
-    width: 95%;
+
+.animals h2 {
     text-align: center;
     margin-top: 20px;
 }
-.animals p{
-    width: 95%;
+
+.animals p {
     text-align: center;
 }
-.animals button:hover{
+
+.animals button:hover {
     background-color: transparent;
     border: 1px solid white;
     cursor: pointer;
     transition: ease-in 0.1s;
 }
 
-.animals >div:nth-child(odd){
-    background-color: rgb(70, 134, 11);
-
-}
-.animals img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    
-}
-.foot{
+.foot {
     padding-top: 20px;
     border-top: 1px solid grey;
-    width: 90%;
-    margin: auto;
+    width: 100%; /* Full width on smaller screens */
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap; /* Allow content to wrap to the next line on small screens */
 }
-.foot p{
+
+.foot p {
     font-size: 12px;
     margin: 4px;
 }
-.up{
+
+.up {
     display: block;
     border: none;
-    margin-left: 90%;
+    margin-left: auto; /* Align to the right on small screens */
     padding: 10px 15px;
-    /* align-items: end; */
     font-size: 20px;
     cursor: pointer;
-    
 }
-.up:hover{
+
+.up:hover {
     border: 1px solid grey;
-    /* border-radius: 20px; */
     background-color: grey;
 }
 
-.com{
+.com {
     background-color: rgb(245, 244, 242);
     font-size: 10px;
     text-align: left;
-    padding: 10px 40px;
+    padding: 10px;
 }
-.com>span{
+
+.com > span {
     font-weight: 700;
 }
-.pagi{
+
+.pagi {
     align-items: center;
-    display:flex;
-    width:180px;
-    justify-content:space-between;
-    margin:auto
+    display: flex;
+    width: 100%; /* Full width on smaller screens */
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow content to wrap to the next line on small screens */
 }
-.pagi button{
+
+.pagi button {
     width: 70px;
     padding: 8px 0px;
     border: none;
@@ -206,65 +209,73 @@ nav{
     border-radius: 5px;
     cursor: pointer;
 }
-.pagi button:hover{
+
+.pagi button:hover {
     background-color: white;
     color: rgb(70, 134, 11);
     border: 1px solid rgb(70, 134, 11);
 }
 
-.check >div{
-    /* border: 1px solid red; */
-    width: 150px;
+.check > div {
+    width: 100%;
     margin: auto;
     padding: 10px;
     align-items: center;
 }
-.check input{
+
+.check input {
     margin-right: 18px;
-    
 }
-.check h3{
+
+.check h3 {
     font-size: 25px;
 }
-.check p{
+
+.check p {
     font-size: 20px;
 }
-.check input:hover{
+
+.check input:hover {
     cursor: pointer;
 }
-.check span{
+
+.check span {
     font-size: 20px;
 }
 
 /* Enquiries And Appointment */
 
-.heading{
+.heading {
     color: rgb(30, 29, 29);
     font-size: 30px;
 }
-.EnquApppara{
+
+.EnquApppara {
     padding-top: 25px;
-    width: 50%;
+    width: 100%; /* Full width on smaller screens */
     font-size: 15px;
     text-align: start;
     margin: auto;
 }
-.EnquiDiv{
+
+.EnquiDiv {
     color: rgb(86, 85, 85);
     background-color: rgb(237, 237, 233);
 }
-.EnquiDiv form{
-    /* border: 1px solid red; */
-    width: 50%;
+
+.EnquiDiv form {
+    width: 100%; /* Full width on smaller screens */
     margin: auto;
     background-color: white;
 }
-.EnquiDiv span{
+
+.EnquiDiv span {
     font-size: 13px;
     margin-left: 5px;
     margin-right: 42px;
     align-items: center;
 }
+
 .EnquiDiv h5{
     padding-top: 20px;
     /* border: 1px solid red; */
@@ -277,80 +288,27 @@ nav{
     height: 28px;
     margin-top: 4px;
 }
-.EnquiDiv select{
+
+.EnquiDiv select {
     margin-top: 4px;
-    width: 55%;
+    width: 55%; /* Full width on smaller screens */
     height: 28px;
 }
-.submitBtn{
-    padding:8px 18px;
-    border:none;
-    display:block;
-    margin-left:110px;
-    border-radius:4px;
-    background-color:rgb(70, 134, 11);
-    color:white;
+
+.submitBtn {
+    padding: 8px 18px;
+    border: none;
+    display: block;
+    margin: 10px auto;
+    border-radius: 4px;
+    background-color: rgb(70, 134, 11);
+    color: white;
 }
-.submitBtn:hover{
+
+.submitBtn:hover {
     background-color: transparent;
     border: 1px solid rgb(70, 134, 11);
     color: rgb(70, 134, 11);
     cursor: pointer;
     transition: ease-in 0.5s;
 }
-
-
-/* HomePage Responsiveness */
-
-@media screen and (max-width:750px){
-    .foot{
-        flex-direction: column;
-    }
-    .foot>div{
-        margin-bottom: 20px;
-    }
-    .foot>div p{
-        font-size: 16px;
-    }
-    .foot>div h4{
-        font-size: 22px;
-    }
-    .animals{
-        grid-template-columns: repeat(2,1fr);
-        
-    }
-    
-    .ban{
-        flex-direction: column;
-    }
-    .banner{
-        width: 100%;
-    }
-    .bluBann{
-        width: 100%;
-        position: relative;
-        margin-bottom: 1px;
-    }
-    .headBan{
-        position: relative;
-    }
-    .regis{
-        flex-direction: column;
-    }
-    .disp{
-        flex-direction: column;
-    }
-    
-   
-    
-}
-@media screen and (max-width:550px){
-    .animals{
-        grid-template-columns: repeat(1,1fr);
-        
-    }
-
-}
-
-/* Home Page Animal section responsiveness */
-

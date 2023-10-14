@@ -20,20 +20,23 @@ VetMate is a comprehensive platform that enables pet owners to conveniently book
 
 ## Pages
 ### Home Page
-![Screenshot 2023-09-02 090713](https://github.com/mrunalibind/puny-potato-4945/assets/112799850/9c15548c-b44a-41f1-921c-05281129f4b6)
+![Screenshot 2023-10-14 144118](https://github.com/mrunalibind/Pet-Care/assets/112799850/e33a00d2-c96a-4c4d-a73d-ce3d76896e64)
+
 
 ### Signup Page
-![Screenshot 2023-09-02 090913](https://github.com/mrunalibind/puny-potato-4945/assets/112799850/411fa745-cd81-436b-8a1d-c6bcf747eb22)
+![Screenshot 2023-10-14 144355](https://github.com/mrunalibind/Pet-Care/assets/112799850/450adbb8-f50a-4ef2-a202-dcbecb3c04c9)
+
 
 ### Login Page
-![Screenshot 2023-09-02 091001](https://github.com/mrunalibind/puny-potato-4945/assets/112799850/cbeae8b8-cf5e-4bff-affa-d7c66a2b23a6)
+![Screenshot 2023-10-14 144445](https://github.com/mrunalibind/Pet-Care/assets/112799850/6aaa84f2-aa70-4b3d-a7de-bf1ad9ec11bf)
 
 ### Pet Appointments Page
 Different types of categories of pets appointments are available on these pages, you can filter out according to the requirements of your pet.
 
-![Screenshot 2023-09-02 091340](https://github.com/mrunalibind/puny-potato-4945/assets/112799850/b49c0e42-f77c-42b0-b006-79d8995e55ca)
+![Screenshot 2023-10-14 144534](https://github.com/mrunalibind/Pet-Care/assets/112799850/3723849d-2d7b-43ed-af18-df5d2f7a6ae2)
+
 
 ### Appointment Booking Form
 Here you have to fill in all details of your pet, appointment date and time, after submitting the form, you will get a confirmation mail on your Gmail account.
 
-![Screenshot 2023-09-02 091618](https://github.com/mrunalibind/puny-potato-4945/assets/112799850/bf15e997-36a9-4a60-91c0-325439e3353c)
+![Screenshot 2023-10-14 144606](https://github.com/mrunalibind/Pet-Care/assets/112799850/b06ccd51-8ca1-4ca8-8d30-ae03c1989d69)

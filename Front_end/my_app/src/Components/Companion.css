@@ -1,0 +1,133 @@
+/* Companion.css */
+
+.companion-container {
+    padding: 20px;
+  }
+  
+  .companion-title {
+    font-size: 20px;
+  }
+  
+  .companion-search-prompt {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  .search-input-container {
+    border: 1px solid grey;
+    width: 30%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-input {
+    outline: none;
+    border: none;
+    font-size: 15px;
+    flex: 1;
+  }
+  
+  .search-icon {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  
+  .companion-content {
+    display: flex;
+    background-color: rgb(245, 244, 242);
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .refine-container {
+    width: 20%;
+    padding: 40px;
+    text-align: start;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .checkbox-group div {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-group input, .checkbox-group span {
+    font-size: 15px;
+  }
+  
+  .card-container {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+  
+  /* Responsive Styles */
+  
+  @media (max-width: 768px) {
+    .companion-title {
+      font-size: 18px;
+    }
+  
+    .companion-search-prompt {
+      font-size: 16px;
+    }
+  
+    .search-input-container {
+      width: 70%;
+    margin: 0 auto;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+  }
+  
+    .checkbox-group input, .checkbox-group span {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .companion-title {
+      font-size: 16px;
+    }
+  
+    .companion-search-prompt {
+      font-size: 14px;
+    }
+  
+    .search-input-container {
+      width: 90%;
+      font-size: 12px;
+    }
+  
+    .checkbox-group input, .checkbox-group span {
+      font-size: 12px;
+    }
+  }
+  

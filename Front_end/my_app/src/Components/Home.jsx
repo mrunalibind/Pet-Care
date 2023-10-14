@@ -1,12 +1,13 @@
 import React from 'react'
 import style from "./Home.module.css"
 
+// Home Page Data
 function Home() {
   return (
     <div>
       <div className={style.ban}>
         <img className={style.banner} src="https://www.companioncare.co.uk/contentassets/c14b93636ac94f8784700161774413e3/companion-care---complete-care---homepage.png?width=1040" alt="" />
-        <div id={style["bluBa"]} className={style.bluBann}>
+        <div className={style.bluBann}>
           <h2>BETTER FOR YOUR</h2>
           <h2>PET, BETTER FOR</h2>
           <h2>YOUR POCKET.</h2>
@@ -16,7 +17,7 @@ function Home() {
           <button>Choose Your health plan</button>
         </div>
       </div>
-      <h1 className={style.headBan} style={{ backgroundColor: "rgb(11, 79, 197)", fontSize: "30px", fontWeight: "500",color: "white"}}>Find Out more about Companion care</h1>
+      <h1 style={{ backgroundColor: "rgb(11, 79, 197)", fontSize: "30px", fontWeight: "500", padding: "15px", color: "white", marginTop: "1px" }}>Find Out more about Companion care</h1>
       <div className={style.animals}>
         <div>
           <div className={style.head}><h2>Protecting your rabbit from flystrike</h2>
